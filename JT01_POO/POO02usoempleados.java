@@ -13,10 +13,10 @@ public class POO02usoempleados {
 		Empleados empleado3=new Empleados("Raúl");
 		System.out.println("///\n///\n///");
 		System.out.println("Datos de los empleados: \n"+empleado1.getdatosempleado()+"\n"+empleado2.getdatosempleado()+"\n"+empleado3.getdatosempleado());
-		
+		System.out.println(Empleados.getnextid()); //Esto sería un método static, en este caso getter.
 	}
 }
-
+///////////////////////////////////////////////////////////////////////////////////////////
 //Constructor y métodos:
 class Empleados {
 	
@@ -33,6 +33,10 @@ class Empleados {
 	public String getdatosempleado() {
 		return "Datos del empleado:\nNombre: "+nombre+"\nSección: "+seccion+"\nID: "+id;
 	}
+	public static String getnextid() {
+		return "El ID del siguiente empleado será: "+nextid; 
+		//Un método static no puede devolver una variable que no sea static, es decir, que no pertenezca a la clase.
+	} 
 	//Setters:
 	public void setseccion(String seccion) {
 		this.seccion=seccion;
