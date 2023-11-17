@@ -1,4 +1,3 @@
-//Ejercicio: Desarrollar Buscaminas 8x8 con 6 minas, el usuario elige coordenadas y va descubriendo celdas, 3 vidas, al perder una se reinicia el tablero.
 package Pg1ev;
 
 import javax.swing.JOptionPane;
@@ -15,9 +14,11 @@ public class Pg08 {
 //////////////////////////////////////////////////////////////////////////////////////////
 
 //Clase y métodos:
+
 class buscaminas{
 	
 	//Variables:
+	
 	private static String [][] tablero={
 			{"O","O","O","O","O","O","O","O",},
 			{"O","O","O","O","O","O","O","O",},
@@ -35,7 +36,9 @@ class buscaminas{
 	private static int columna;
 	private static int f;
 	private static int c;
+	
 	//Métodos:
+	
 	public static void reiniciotablero() {
 		for (int h=0;h<tablero.length;h++) {
 			for (int z=0;z<tablero.length;z++) {
@@ -118,7 +121,6 @@ class buscaminas{
 		tablero[7][1]=" ";
 	}
 	public static void espacio3() {
-		tablero[4][5]=" ";
 		tablero[4][6]=" ";
 		tablero[4][7]=" ";
 		tablero[5][4]=" ";
@@ -147,9 +149,9 @@ class buscaminas{
 		//Espacios:
 		if (f==0&&c==5||f==0&&c==6||f==0&&c==7) buscaminas.espacio1();
 		if (f==3&&c==0||f==4&&c==0||f==5&&c==0||f==6&&c==0||f==6&&c==1||f==7&&c==0||f==7&&c==1) buscaminas.espacio2();
-		if (f==4&&c==5||f==4&&c==6||f==4&&c==7||f==5&&c==4||f==5&&c==5||f==5&&c==6||f==5&&c==7||f==6&&c==5||f==6&&c==6||f==6&&c==7||f==7&&c==5||f==7&&c==6||f==7&&c==7) buscaminas.espacio3();
+		if (f==4&&c==6||f==4&&c==7||f==5&&c==4||f==5&&c==5||f==5&&c==6||f==5&&c==7||f==6&&c==5||f==6&&c==6||f==6&&c==7||f==7&&c==5||f==7&&c==6||f==7&&c==7) buscaminas.espacio3();
 		//Numeros 1:
-		if (f==0&&c==0||f==0&&c==1||f==0&&c==3||f==0&&c==4||f==1&&c==0||f==1&&c==4||f==1&&c==5||f==1&&c==6||f==1&&c==7||f==2&&c==0||f==2&&c==1||f==2&&c==7||f==3&&c==1||f==3&&c==2||f==3&&c==6||f==3&&c==7||f==4&&c==1||f==4&&c==4||f==5&&c==1||f==5&&c==2||f==5&&c==3||f==6&&c==2||f==6&&c==3||f==6&&c==4||f==7&&c==2||f==7&&c==4) buscaminas.setnumero1();
+		if (f==0&&c==0||f==0&&c==1||f==0&&c==3||f==0&&c==4||f==1&&c==0||f==1&&c==4||f==1&&c==5||f==1&&c==6||f==1&&c==7||f==2&&c==0||f==2&&c==1||f==2&&c==7||f==3&&c==1||f==3&&c==2||f==3&&c==6||f==3&&c==7||f==4&&c==1||f==4&&c==4||f==4&&c==5||f==5&&c==1||f==5&&c==2||f==5&&c==3||f==6&&c==2||f==6&&c==3||f==6&&c==4||f==7&&c==2||f==7&&c==4) buscaminas.setnumero1();
 		//Numeros 2:
 		if (f==0&&c==2||f==1&&c==2||f==2&&c==2||f==2&&c==3||f==2&&c==4||f==2&&c==5||f==3&&c==3||f==3&&c==5||f==4&&c==3) buscaminas.setnumero2();
 	}
@@ -157,7 +159,7 @@ class buscaminas{
 		if (vidas>0) buscaminas.gettablero(); else buscaminas.gettablerox();
 	}
 	public static void bienvenida() {
-		JOptionPane.showMessageDialog(null, "Bienvenido al Buscaminas.\nGanarás cuando descubras todas las casillas sin minas. \nSólo tienes una vida, elige bien las casillas.\n¡Buena suerte!");
+		JOptionPane.showMessageDialog(null, "Bienvenido al Buscaminas.\nGanarás cuando descubras todas las casillas sin minas. \nTienes 3 vidas y hay 6 bombas, elige bien las casillas.\nAl perder una vida se reinicia el mapa.\n¡Buena suerte!");
 	}
 	public static void hasperdido() {
 		JOptionPane.showMessageDialog(null, "¡Te has quedado sin vidas!\nHas perdido.");
@@ -167,8 +169,8 @@ class buscaminas{
 		System.out.println("\n\n\nInteracciones: "+interacciones+"\nVidas: "+vidas);
 	}
 	public static void comprobacionvictoria() {
-		if (tablero[0][5].equals(" ")&&tablero[0][6].equals(" ")&&tablero[0][7].equals(" ")&&tablero[3][0].equals(" ")&&tablero[4][0].equals(" ")&&tablero[5][0].equals(" ")&&tablero[6][0].equals(" ")&&tablero[6][1].equals(" ")&&tablero[7][0].equals(" ")&&tablero[7][1].equals(" ")&&tablero[4][5].equals(" ")&&tablero[4][6].equals(" ")&&tablero[4][7].equals(" ")&&tablero[5][4].equals(" ")&&tablero[5][5].equals(" ")&&tablero[5][6].equals(" ")&&tablero[5][7].equals(" ")&&tablero[6][5].equals(" ")&&tablero[6][6].equals(" ")&&tablero[6][7].equals(" ")&&tablero[7][5].equals(" ")&&tablero[7][6].equals(" ")&&tablero[7][7].equals(" ")&&
-			tablero[0][0].equals("1")&&tablero[0][1].equals("1")&&tablero[0][3].equals("1")&&tablero[0][4].equals("1")&&tablero[1][0].equals("1")&&tablero[1][4].equals("1")&&tablero[1][5].equals("1")&&tablero[1][6].equals("1")&&tablero[1][7].equals("1")&&tablero[2][0].equals("1")&&tablero[2][1].equals("1")&&tablero[2][7].equals("1")&&tablero[3][1].equals("1")&&tablero[3][2].equals("1")&&tablero[3][6].equals("1")&&tablero[3][7].equals("1")&&tablero[4][1].equals("1")&&tablero[4][4].equals("1")&&tablero[5][1].equals("1")&&tablero[5][2].equals("1")&&tablero[5][3].equals("1")&&tablero[6][2].equals("1")&&tablero[6][3].equals("1")&&tablero[6][4].equals("1")&&tablero[7][2].equals("1")&&tablero[7][4].equals("1")&&
+		if (tablero[0][5].equals(" ")&&tablero[0][6].equals(" ")&&tablero[0][7].equals(" ")&&tablero[3][0].equals(" ")&&tablero[4][0].equals(" ")&&tablero[5][0].equals(" ")&&tablero[6][0].equals(" ")&&tablero[6][1].equals(" ")&&tablero[7][0].equals(" ")&&tablero[7][1].equals(" ")&&tablero[4][6].equals(" ")&&tablero[4][7].equals(" ")&&tablero[5][4].equals(" ")&&tablero[5][5].equals(" ")&&tablero[5][6].equals(" ")&&tablero[5][7].equals(" ")&&tablero[6][5].equals(" ")&&tablero[6][6].equals(" ")&&tablero[6][7].equals(" ")&&tablero[7][5].equals(" ")&&tablero[7][6].equals(" ")&&tablero[7][7].equals(" ")&&
+			tablero[0][0].equals("1")&&tablero[0][1].equals("1")&&tablero[0][3].equals("1")&&tablero[0][4].equals("1")&&tablero[1][0].equals("1")&&tablero[1][4].equals("1")&&tablero[1][5].equals("1")&&tablero[1][6].equals("1")&&tablero[1][7].equals("1")&&tablero[2][0].equals("1")&&tablero[2][1].equals("1")&&tablero[2][7].equals("1")&&tablero[3][1].equals("1")&&tablero[3][2].equals("1")&&tablero[3][6].equals("1")&&tablero[3][7].equals("1")&&tablero[4][1].equals("1")&&tablero[4][4].equals("1")&&tablero[4][5].equals("1")&&tablero[5][1].equals("1")&&tablero[5][2].equals("1")&&tablero[5][3].equals("1")&&tablero[6][2].equals("1")&&tablero[6][3].equals("1")&&tablero[6][4].equals("1")&&tablero[7][2].equals("1")&&tablero[7][4].equals("1")&&
 			tablero[0][2].equals("2")&&tablero[1][2].equals("2")&&tablero[2][2].equals("2")&&tablero[2][3].equals("2")&&tablero[2][4].equals("2")&&tablero[2][5].equals("2")&&tablero[3][3].equals("2")&&tablero[3][5].equals("2")&&tablero[4][3].equals("2")) victoria=true;
 	}
 	public static void victoria() {
