@@ -1,25 +1,7 @@
 package Pg1ev;
 
 import javax.swing.JOptionPane;
-/*
- * Hacemos un boolean para cada casilla.
- * Si es boolean2y2=false;
- * Entonces tablero[2][2]=(O);
- * Modificar los métodos de obtención de entrada de la fila y columna para que si elige 2 y 2, entonces no haga nada y el boolean2y2=true;
- * if (boolean2y2=true) que ejecute los metodos(dejate de esos metodos porque no funcionaria con las casillas en espacio en blanco, 
- * para las casillas en blanco los metodos las revelan todas, aqui solo queremos las 9, para revelar las 9 casillas abyacentes.
- * o mejor if (boolean2y2=true){
- * tablero[1][1]="X";
- * tablero[1][2]="2";
- * tablero[1][3]="X";
- * tablero[2][1]="1";
- * tablero[2][2]="2";
- * tablero[2][3]="2";
- * tablero[3][1]="1";
- * tablero[3][2]="1";
- * tablero[3][3]="2";
- * }
- */
+
 public class Pg08Ej3 {
 
 	public static void main(String[] args) {
@@ -28,6 +10,7 @@ public class Pg08Ej3 {
 		buscaminas.dowhilebuscaminas();
 	}
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -124,47 +107,11 @@ class buscaminas{
 		tablero[fila][columna]="X";
 		buscaminas.reiniciotablero();
 	}
-	/*
-	public static void espacio1() {
-		tablero[0][5]=" ";
-		tablero[0][6]=" ";
-		tablero[0][7]=" ";
-	}
-	public static void espacio2() {
-		tablero[3][0]=" ";
-		tablero[4][0]=" ";
-		tablero[5][0]=" ";
-		tablero[6][0]=" ";
-		tablero[6][1]=" ";
-		tablero[7][0]=" ";
-		tablero[7][1]=" ";
-	}
-	public static void espacio3() {
-		tablero[4][6]=" ";
-		tablero[4][7]=" ";
-		tablero[5][4]=" ";
-		tablero[5][5]=" ";
-		tablero[5][6]=" ";
-		tablero[5][7]=" ";
-		tablero[6][5]=" ";
-		tablero[6][6]=" ";
-		tablero[6][7]=" ";
-		tablero[7][5]=" ";
-		tablero[7][6]=" ";
-		tablero[7][7]=" ";
-	}
-	public static void setnumero1() {
-		tablero[f][c]="1";
-	}
-	public static void setnumero2() {
-		tablero[f][c]="2";
-	}
-	*/
 	public static void tableroactual() {
 		if (vidas>0) buscaminas.gettablero(); else buscaminas.gettablerox();
 	}
 	public static void bienvenida() {
-		JOptionPane.showMessageDialog(null, "Bienvenido al Buscaminas.\nGanarás cuando descubras todas las casillas sin minas. \nEl tablero se muestra en consola. \nTienes 3 vidas y hay 6 bombas, elige bien las casillas.\nAl perder una vida se reinicia el mapa.\n¡Buena suerte!");
+		JOptionPane.showMessageDialog(null, "Bienvenido al Buscaminas.\nGanarás cuando descubras todas las casillas sin minas. \nEl tablero se muestra en consola, las minas se marcan con una X. \nTienes 3 vidas y hay 6 minas, elige bien las casillas.\nAl perder una vida se reinicia el mapa.\n¡Buena suerte!");
 	}
 	public static void hasperdido() {
 		JOptionPane.showMessageDialog(null, "¡Te has quedado sin vidas!\nHas perdido.");
@@ -185,11 +132,6 @@ class buscaminas{
 		}
 	}
 	public static void comprobacioncasilla() {
-		if (f==1&&c==1||f==1&&c==3||f==2&&c==6||f==3&&c==4||f==4&&c==2||f==7&&c==3) {
-			buscaminas.bomba(f, c);
-			vidas--;
-			JOptionPane.showMessageDialog(null, "¡Has tocado una bomba!\n Pierdes una vida.");
-		}
 		//Aqui van los nuevos if:
 		if (f==0&&c==0) {
 			tablero[0][0]="1"; tablero[0][1]="1"; tablero[1][0]="1"; tablero[1][1]="X";
@@ -383,13 +325,11 @@ class buscaminas{
 		if (f==7&&c==7) {
 			tablero[6][6]=" "; tablero[6][7]=" "; tablero[7][7]=" "; tablero[7][6]=" ";
 		}
-		////Espacios:
-		//if (f==0&&c==5||f==0&&c==6||f==0&&c==7) buscaminas.espacio1();
-		//if (f==3&&c==0||f==4&&c==0||f==5&&c==0||f==6&&c==0||f==6&&c==1||f==7&&c==0||f==7&&c==1) buscaminas.espacio2();
-		//if (f==4&&c==6||f==4&&c==7||f==5&&c==4||f==5&&c==5||f==5&&c==6||f==5&&c==7||f==6&&c==5||f==6&&c==6||f==6&&c==7||f==7&&c==5||f==7&&c==6||f==7&&c==7) buscaminas.espacio3();
-		////Numeros 1:
-		//if (f==0&&c==0||f==0&&c==1||f==0&&c==3||f==0&&c==4||f==1&&c==0||f==1&&c==4||f==1&&c==5||f==1&&c==6||f==1&&c==7||f==2&&c==0||f==2&&c==1||f==2&&c==7||f==3&&c==1||f==3&&c==2||f==3&&c==6||f==3&&c==7||f==4&&c==1||f==4&&c==4||f==4&&c==5||f==5&&c==1||f==5&&c==2||f==5&&c==3||f==6&&c==2||f==6&&c==3||f==6&&c==4||f==7&&c==2||f==7&&c==4) buscaminas.setnumero1();
-		////Numeros 2:
-		//if (f==0&&c==2||f==1&&c==2||f==2&&c==2||f==2&&c==3||f==2&&c==4||f==2&&c==5||f==3&&c==3||f==3&&c==5||f==4&&c==3) buscaminas.setnumero2();
+		if (f==1&&c==1||f==1&&c==3||f==2&&c==6||f==3&&c==4||f==4&&c==2||f==7&&c==3) {
+			buscaminas.bomba(f, c);
+			vidas--;
+			JOptionPane.showMessageDialog(null, "¡Has tocado una bomba!\n Pierdes una vida.");
+			buscaminas.reiniciotablero();
+		}
 	}
 }
