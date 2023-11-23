@@ -2,12 +2,12 @@ package Pg1ev;
 
 import javax.swing.JOptionPane;
 
-public class Pg08 {
+public class Pg08BuscaminasClásico {
 
 	public static void main(String[] args) {
-		buscaminas.gettablero();
-		buscaminas.bienvenida();
-		buscaminas.dowhilebuscaminas();
+		buscaminasclasico.gettablero();
+		buscaminasclasico.bienvenida();
+		buscaminasclasico.dowhilebuscaminas();
 	}
 }
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -15,7 +15,7 @@ public class Pg08 {
 
 //Clase y métodos:
 
-class buscaminas{
+class buscaminasclasico{
 	
 	//Variables:
 	
@@ -48,14 +48,14 @@ class buscaminas{
 	}
 	public static void dowhilebuscaminas() {
 		do {
-			buscaminas.entradafyc();
-			buscaminas.comprobacioncasilla();
-			buscaminas.interaccion();
-			buscaminas.tableroactual();
-			buscaminas.comprobacionvictoria();
-			buscaminas.victoria();
+			buscaminasclasico.entradafyc();
+			buscaminasclasico.comprobacioncasilla();
+			buscaminasclasico.interaccion();
+			buscaminasclasico.tableroactual();
+			buscaminasclasico.comprobacionvictoria();
+			buscaminasclasico.victoria();
 		} while (vidas>0);
-		if (vidas==0) buscaminas.hasperdido();
+		if (vidas==0) buscaminasclasico.hasperdido();
 	}
 	public static String [][] gettablero(){
 		for (int i=0;i<tablero.length;i++) {
@@ -87,24 +87,24 @@ class buscaminas{
 		return columna;
 	}
 	public static int peticionf() {
-		f=buscaminas.entradafila();
+		f=buscaminasclasico.entradafila();
 		return f;
 	}
 	public static int peticionc() {
-		c=buscaminas.entradacolumna();
+		c=buscaminasclasico.entradacolumna();
 		return c;
 	}
 	public static void entradafyc() {
 		do {
-		buscaminas.peticionf();
-		buscaminas.peticionc();
+		buscaminasclasico.peticionf();
+		buscaminasclasico.peticionc();
 		if (f!=0&&f!=1&&f!=2&&f!=3&&f!=4&&f!=5&&f!=6&&f!=7||
 			c!=0&&c!=1&&c!=2&&c!=3&&c!=4&&c!=5&&c!=6&&c!=7) JOptionPane.showMessageDialog(null, "Las coordenadas introducidas no son válidas.");
 		} while (f!=0&&f!=1&&f!=2&&f!=3&&f!=4&&f!=5&&f!=6&&f!=7||c!=0&&c!=1&&c!=2&&c!=3&&c!=4&&c!=5&&c!=6&&c!=7);
 	}
 	public static void bomba(int fila, int columna) {
 		tablero[fila][columna]="X";
-		buscaminas.reiniciotablero();
+		buscaminasclasico.reiniciotablero();
 	}
 	public static void espacio1() {
 		tablero[0][5]=" ";
@@ -142,24 +142,24 @@ class buscaminas{
 	}
 	public static void comprobacioncasilla() {
 		if (f==1&&c==1||f==1&&c==3||f==2&&c==6||f==3&&c==4||f==4&&c==2||f==7&&c==3) {
-			buscaminas.bomba(f, c);
+			buscaminasclasico.bomba(f, c);
 			vidas--;
 			JOptionPane.showMessageDialog(null, "¡Has tocado una bomba!\n Pierdes una vida.");
 		}
 		//Espacios:
-		if (f==0&&c==5||f==0&&c==6||f==0&&c==7) buscaminas.espacio1();
-		if (f==3&&c==0||f==4&&c==0||f==5&&c==0||f==6&&c==0||f==6&&c==1||f==7&&c==0||f==7&&c==1) buscaminas.espacio2();
-		if (f==4&&c==6||f==4&&c==7||f==5&&c==4||f==5&&c==5||f==5&&c==6||f==5&&c==7||f==6&&c==5||f==6&&c==6||f==6&&c==7||f==7&&c==5||f==7&&c==6||f==7&&c==7) buscaminas.espacio3();
+		if (f==0&&c==5||f==0&&c==6||f==0&&c==7) buscaminasclasico.espacio1();
+		if (f==3&&c==0||f==4&&c==0||f==5&&c==0||f==6&&c==0||f==6&&c==1||f==7&&c==0||f==7&&c==1) buscaminasclasico.espacio2();
+		if (f==4&&c==6||f==4&&c==7||f==5&&c==4||f==5&&c==5||f==5&&c==6||f==5&&c==7||f==6&&c==5||f==6&&c==6||f==6&&c==7||f==7&&c==5||f==7&&c==6||f==7&&c==7) buscaminasclasico.espacio3();
 		//Numeros 1:
-		if (f==0&&c==0||f==0&&c==1||f==0&&c==3||f==0&&c==4||f==1&&c==0||f==1&&c==4||f==1&&c==5||f==1&&c==6||f==1&&c==7||f==2&&c==0||f==2&&c==1||f==2&&c==7||f==3&&c==1||f==3&&c==2||f==3&&c==6||f==3&&c==7||f==4&&c==1||f==4&&c==4||f==4&&c==5||f==5&&c==1||f==5&&c==2||f==5&&c==3||f==6&&c==2||f==6&&c==3||f==6&&c==4||f==7&&c==2||f==7&&c==4) buscaminas.setnumero1();
+		if (f==0&&c==0||f==0&&c==1||f==0&&c==3||f==0&&c==4||f==1&&c==0||f==1&&c==4||f==1&&c==5||f==1&&c==6||f==1&&c==7||f==2&&c==0||f==2&&c==1||f==2&&c==7||f==3&&c==1||f==3&&c==2||f==3&&c==6||f==3&&c==7||f==4&&c==1||f==4&&c==4||f==4&&c==5||f==5&&c==1||f==5&&c==2||f==5&&c==3||f==6&&c==2||f==6&&c==3||f==6&&c==4||f==7&&c==2||f==7&&c==4) buscaminasclasico.setnumero1();
 		//Numeros 2:
-		if (f==0&&c==2||f==1&&c==2||f==2&&c==2||f==2&&c==3||f==2&&c==4||f==2&&c==5||f==3&&c==3||f==3&&c==5||f==4&&c==3) buscaminas.setnumero2();
+		if (f==0&&c==2||f==1&&c==2||f==2&&c==2||f==2&&c==3||f==2&&c==4||f==2&&c==5||f==3&&c==3||f==3&&c==5||f==4&&c==3) buscaminasclasico.setnumero2();
 	}
 	public static void tableroactual() {
-		if (vidas>0) buscaminas.gettablero(); else buscaminas.gettablerox();
+		if (vidas>0) buscaminasclasico.gettablero(); else buscaminasclasico.gettablerox();
 	}
 	public static void bienvenida() {
-		JOptionPane.showMessageDialog(null, "Bienvenido al Buscaminas.\nGanarás cuando descubras todas las casillas sin minas. \nTienes 3 vidas y hay 6 bombas, elige bien las casillas.\nAl perder una vida se reinicia el mapa.\n¡Buena suerte!");
+		JOptionPane.showMessageDialog(null, "Bienvenido al Buscaminas.\nGanarás cuando descubras todas las casillas sin minas. \nEl tablero se muestra en consola. \nTienes 3 vidas y hay 6 bombas, elige bien las casillas.\nAl perder una vida se reinicia el mapa.\n¡Buena suerte!");
 	}
 	public static void hasperdido() {
 		JOptionPane.showMessageDialog(null, "¡Te has quedado sin vidas!\nHas perdido.");
@@ -175,7 +175,7 @@ class buscaminas{
 	}
 	public static void victoria() {
 		if (victoria==true) {
-			JOptionPane.showMessageDialog(null, "¡HAS GANADO!"); //Introduce aqui el array en verde
+			JOptionPane.showMessageDialog(null, "¡HAS GANADO!");
 			System.exit(0);
 		}
 	}
