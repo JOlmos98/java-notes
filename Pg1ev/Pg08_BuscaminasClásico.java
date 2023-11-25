@@ -2,7 +2,7 @@ package Pg1ev;
 
 import javax.swing.JOptionPane;
 
-public class Pg08BuscaminasClásico {
+public class Pg08_BuscaminasClásico {
 
 	public static void main(String[] args) {
 		buscaminasclasico.gettablero();

@@ -2,7 +2,7 @@ package Pg1ev;
 
 import javax.swing.JOptionPane;
 
-public class Pg08Ej3 {
+public class Pg08_Ej3 {
 
 	public static void main(String[] args) {
 		buscaminas.gettablero();

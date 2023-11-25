@@ -1,6 +1,6 @@
 package Pg1ev;
 //Desarrolle en Java un programa que lea tres números enteros y muestre su suma.
-public class Pg01Ej5 {
+public class Pg01_Ej5 {
 
 	public static void main(String[] args) {
 		int a, b, c;

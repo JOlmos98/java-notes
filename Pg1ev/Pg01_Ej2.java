@@ -1,6 +1,6 @@
 package Pg1ev;
 //Desarrolle una versión mejorada del ejercicio anterior, con mensajes al usuario.
-public class Pg01Ej2 {
+public class Pg01_Ej2 {
 
 	public static void main(String[] args) {
 		int a=23;

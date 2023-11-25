@@ -1,6 +1,6 @@
 package Pg1ev;
 //Un programa que lea dos números enteros y muestre su suma.
-public class Pg01Ej1 {
+public class Pg01_Ej1 {
 
 	public static void main(String[] args) {
 		

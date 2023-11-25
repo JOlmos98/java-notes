@@ -1,6 +1,6 @@
 package Pg1ev;
 //Desarrolle un programa que lea dos números enteros y muestre su producto. 
-public class Pg01Ej3 {
+public class Pg01_Ej3 {
 
 	public static void main(String[] args) {
 		

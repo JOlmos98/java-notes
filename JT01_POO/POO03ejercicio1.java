@@ -4,6 +4,7 @@ public class POO03ejercicio1 {
 
 	public static void main(String[] args) {
 		
+		//Ordenes al programa.
 		CC cuenta1=new CC("Jesús Olmos Soler", 300);
 		System.out.println(cuenta1.getdatosgeneralesCC()+"\n");
 		CC cuenta2=new CC("Nuria Zambudio Mora", 5);
