@@ -3,7 +3,7 @@ package JT01_POO;
 public class POO02usoempleados {
 
 	public static void main(String[] args) {
-		
+		/*
 		Empleados empleado1=new Empleados("Antonio");
 		System.out.println(empleado1.getdatosempleado());
 		System.out.println();
@@ -14,10 +14,12 @@ public class POO02usoempleados {
 		System.out.println("///\n///\n///");
 		System.out.println("Datos de los empleados: \n"+empleado1.getdatosempleado()+"\n"+empleado2.getdatosempleado()+"\n"+empleado3.getdatosempleado());
 		System.out.println(Empleados.getnextid()); //Esto sería un método static, en este caso getter.
+		*/
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
 //Constructor y métodos:
+/*
 class Empleados {
 	
 	public Empleados (String nombre) {
@@ -47,3 +49,4 @@ class Empleados {
 	private int id;
 	private static int nextid=1; //Al ser static, el ++ si afecta y se guarda.
 }
+*/
