@@ -5,12 +5,18 @@ import java.time.LocalDate;
 public class POO05herencia {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		Empleados manuel=new Empleados("Manuel", 1100.5, 2008, 12, 23);
+		Jefes ana=new Jefes("Ana", 1345.64, 2003, 04, 23);
+		System.out.println(ana.getSueldo());
+		ana.setSubirSueldo(10);
+		System.out.println(ana.getSueldo());
+		ana.setIncentivo(150);
+		System.out.println("El sueldo de Ana con la subida del 10% más el incentivo es:\n"+ana.getSueldo());
+		
 	}
-
 }
-
+///////////////////////////////////////////////////////////////////////////////
 class Empleados{
 	
 	//Constructor:
@@ -45,6 +51,26 @@ class Empleados{
 	}
 	public String getDatosEmpleado() {
 		return "Nombre del empleado: "+nombre+"\nID del empleado: "+id;
+	}
+	
+	
+}
+
+class Jefes extends Empleados{
+
+	public Jefes(String nom, double suel, int agno, int mes, int dia) {
+		super(nom, suel, agno, mes, dia);
+	}
+	//Variables:
+	private double incentivo;
+	//Setter:
+	public void setIncentivo(double cifra) {
+		incentivo=cifra;
+	}
+	//Getter:
+	public double getSueldo() {
+		double sueldojefe=super.getSueldo();
+		return sueldojefe+incentivo;
 	}
 	
 	

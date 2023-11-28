@@ -10,9 +10,19 @@ public class Pg02_Ej9 {
         int mes=Integer.parseInt(JOptionPane.showInputDialog("Introduce el mes actual: "));
         int año=Integer.parseInt(JOptionPane.showInputDialog("Introduce el año actual: "));
         
-		
-		
-		
+		if (mes==1||mes==3||mes==5||mes==1||mes==7||mes==8||mes==10||mes==12) {
+			if (dia>0&&dia<=31) System.out.println("La fecha actual es: "+dia+"/"+mes+"/"+año);
+			else System.out.println("La fecha introducida no es válida.");
+		}
+		else if (mes==4||mes==6||mes==9||mes==11) {
+			if (dia>0&&dia<=30) System.out.println("La fecha actual es: "+dia+"/"+mes+"/"+año);
+			else System.out.println("La fecha introducida no es válida.");
+		}
+		else if (mes==2) {
+			if (dia>0&&dia<=28) System.out.println("La fecha actual es: "+dia+"/"+mes+"/"+año);
+			else System.out.println("La fecha introducida no es válida.");
+		}
+		else System.out.println("La fecha introducida no es válida.");
 		
 	}
 }
