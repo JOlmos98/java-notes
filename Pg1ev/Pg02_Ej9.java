@@ -1,5 +1,5 @@
 package Pg1ev;
-
+//Realice un programa que lea el día, mes y año de una fecha (d.C.) e indique si la fecha es correcta. Suponga meses de 28, 30 y 31 días. No considere años bisiestos.
 import javax.swing.JOptionPane;
 
 public class Pg02_Ej9 {

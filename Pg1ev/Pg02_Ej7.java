@@ -1,5 +1,5 @@
 package Pg1ev;
-
+//Desarrolle de nuevo el ejercicio anterior, utilizando ahora como recurso el intercambio de valores entre dos variables x e y (aux = x; x=y; y=aux;).
 public class Pg02_Ej7 {
 
 	public static void main(String[] args) {
