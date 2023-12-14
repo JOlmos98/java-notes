@@ -1,5 +1,5 @@
 package Pg1ev;
-
+//Ejercicio de matriz contenida.
 import javax.swing.JOptionPane;
 
 public class Pg00_Ex1_Ej1 {
