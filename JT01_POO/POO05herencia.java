@@ -2,7 +2,7 @@ package JT01_POO;
 
 import java.time.LocalDate;
 
-public class POO05herencia {
+public class POO05herencia { 
 
 	public static void main(String[] args) {
 		/*
@@ -31,13 +31,13 @@ public class POO05herencia {
 		
 		for (Empleados variable:arrayEmpleados) {
 			System.out.println(variable.getDatosEmpleado()+"\nSueldo: "+variable.getSueldo()+"\n");
-		} //El enlazado dinámico es que en este for, la "variable" identifica la naturaleza del objeto y el getSueldo actúa según su naturaleza.
+		}}} //El enlazado dinámico es que en este for, la "variable" identifica la naturaleza del objeto y el getSueldo actúa según su naturaleza.
 		/*
 		 * El polimorfismo es como el objeto Isaac puede ser usado como
 		 * objeto de clase Empleados o de clase Jefes según el contexto.
 		 */
 		
-		
+		/* QUITAR ESTO PARA QUE FUNCIONE	
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////
@@ -96,6 +96,5 @@ class Jefes extends Empleados{
 		double sueldojefe=super.getSueldo();
 		return sueldojefe+incentivo;
 	}
-	
-	
 }
+*/ //QUITAR ESTO PARA QUE FUNCIONE
