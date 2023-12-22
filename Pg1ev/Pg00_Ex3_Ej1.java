@@ -14,10 +14,10 @@ public class Pg00_Ex3_Ej1 {
 		};
 		
 		String[] ArrayPalabras=new String[4];
-		ArrayPalabras[0]=JOptionPane.showInputDialog("Introduce en mayúsuclas una palabra de cuatro letras(1):");
-		ArrayPalabras[1]=JOptionPane.showInputDialog("Introduce en mayúsuclas una palabra de cuatro letras(2):");
-		ArrayPalabras[2]=JOptionPane.showInputDialog("Introduce en mayúsuclas una palabra de cuatro letras(3):");
-		ArrayPalabras[3]=JOptionPane.showInputDialog("Introduce en mayúsuclas una palabra de cuatro letras(4):");
+		ArrayPalabras[0]=JOptionPane.showInputDialog("Introduce en mayúsculas una palabra de cuatro letras(1):");
+		ArrayPalabras[1]=JOptionPane.showInputDialog("Introduce en mayúsculas una palabra de cuatro letras(2):");
+		ArrayPalabras[2]=JOptionPane.showInputDialog("Introduce en mayúsculas una palabra de cuatro letras(3):");
+		ArrayPalabras[3]=JOptionPane.showInputDialog("Introduce en mayúsculas una palabra de cuatro letras(4):");
 		
 		System.out.println("Coinciden "+Palabras.palabrasMatriz(MatrizLetras, ArrayPalabras)+"/4 palabras.");
 	}

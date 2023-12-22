@@ -6,7 +6,7 @@ public interface Vehiculos {
 	
 	public abstract String getPLAZAS();
 	
-	public abstract void ACELERAR(double aceleramiento);
-	public abstract void FRENAR(double frenado);
+	public abstract void ACELERAR(double aumento);
+	public abstract void FRENAR(double disminucion);
 	public abstract double getVelocidadActual();
 }

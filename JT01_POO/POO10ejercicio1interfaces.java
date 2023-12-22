@@ -56,16 +56,19 @@ class Coche implements Vehiculos{
 	}
 
 	@Override
-	public void ACELERAR(double aceleramiento) {
+	public void ACELERAR(double aumento) {
 		// TODO Auto-generated method stub
-		Velocidad=Velocidad+aceleramiento;
-		if (Velocidad>Vehiculos.VELOCIDAD_MAXIMA) System.out.println("Velocidad máxima superada.\nVelocidad: "+Velocidad);
+		Velocidad=Velocidad+aumento;
+		if (Velocidad>Vehiculos.VELOCIDAD_MAXIMA) {
+			String AvisoVel = "Velocidad máxima superada.\nVelocidad: ";
+			System.out.println(AvisoVel+Velocidad);
+		}
 	}
 
 	@Override
-	public void FRENAR(double frenado) {
+	public void FRENAR(double disminucion) {
 		// TODO Auto-generated method stub
-		Velocidad=Velocidad-frenado;
+		Velocidad=Velocidad-disminucion;
 		if (Velocidad<0) Velocidad=0;
 	}
 
@@ -96,16 +99,19 @@ class Moto implements Vehiculos{
 	}
 
 	@Override
-	public void ACELERAR(double aceleramiento) {
+	public void ACELERAR(double aumento) {
 		// TODO Auto-generated method stub
-		Velocidad=Velocidad+aceleramiento;
-		if (Velocidad>Vehiculos.VELOCIDAD_MAXIMA) System.out.println("Velocidad máxima superada.\nVelocidad: "+Velocidad);
+		Velocidad=Velocidad+aumento;
+		if (Velocidad>Vehiculos.VELOCIDAD_MAXIMA) {
+			String AvisoVel = "Velocidad máxima superada.\nVelocidad: ";
+			System.out.println(AvisoVel+Velocidad);
+		}
 	}
 
 	@Override
-	public void FRENAR(double frenado) {
+	public void FRENAR(double disminucion) {
 		// TODO Auto-generated method stub
-		Velocidad=Velocidad-frenado;
+		Velocidad=Velocidad-disminucion;
 		if (Velocidad<0) Velocidad=0;
 	}
 
