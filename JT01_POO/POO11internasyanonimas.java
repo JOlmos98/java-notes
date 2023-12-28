@@ -39,22 +39,35 @@ class Reloj{
 	
 	public void ejecutarTemporizador(int intervalo, boolean sonido) {
 		//Metemos la clase quee staba fuera, dentro del método.
-		class DameLaHora implements ActionListener{
+		/*class DameLaHora implements ActionListener{
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				LocalDateTime Ahora=LocalDateTime.now();
-				
-				
 				System.out.println("La fecha y hora actual es: "+Ahora);
 				if (sonido) Toolkit.getDefaultToolkit().beep();
 			}
 			
 		}
 		
-		ActionListener oyente=new DameLaHora();
-		Timer miTemporizador=new Timer(intervalo, oyente);
+		ActionListener oyente=new DameLaHora();*/
+		
+		/*
+		 * Ahora inhabilitamos el método y hacemos que oyente 
+		 * se convierta en una clase interna anónima.
+		 */
+		Timer miTemporizador=new Timer(intervalo, new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				LocalDateTime Ahora=LocalDateTime.now();
+				System.out.println("La fecha y hora actual es: "+Ahora);
+				if (sonido) Toolkit.getDefaultToolkit().beep();
+			}
+			
+		});
 		miTemporizador.start();
 	}
 	
