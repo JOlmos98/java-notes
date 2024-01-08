@@ -62,8 +62,33 @@ class PanelEvent extends JPanel implements ActionListener{
 		// TODO Auto-generated method stub
 		
 		//Object botonpulsador=e.getSource(); también podemos hacer esto y poner la variable en los if.
-		if (e.getSource()==bluebutton) setBackground(Color.blue);
+		if (e.getSource()==bluebutton) setBackground(new Color(50,50,255));
 		else if (e.getSource()==redbutton) setBackground(Color.RED);
 		else if (e.getSource()==greenbutton) setBackground(Color.GREEN);
 	}
 }
+
+/*
+ * La clase oyente es la que lleva el ActionListener, podemos hacer la
+ * clase oyente independiente de la siguiente forma:
+ * 
+ * Creamos la clase |private class ColorDeFondo implements ActionListener| 
+ * evidentemente quitando el implements ActionListener de la clase anterior.
+ * 
+ * Añadimos el método que implementa ActionListener y escribimos en él 
+ * |setBackground(ColorDeFondo);|, para que este método funcione, la clase 
+ * creada deberá ser interna de la clase anterior, en este caso, de la clase PanelEvent.
+ * 
+ * Entonces, en esa clase, declaramos |private Color ColorDeFondo;| que
+ * almacenará el color a establecer de fondo. Entonces creamos el constructor.
+ * 
+ * public ColorDeFondo (Color c){
+ * ColorDeFondo=c;
+ * }
+ * 
+ * Entonces, una vez hecho todo lo anterior, cambiamos en el addActionListener el
+ * this por blue, red o green y añadimos las instancias mencionadas:
+ * ColorDeFondo blue=new ColorDeFondo(Color.BLUE);
+ * ColorDeFondo red=new ColorDeFondo(Color.RED);
+ * ColorDeFondo green=new ColorDeFondo(Color.GREEN);
+ */
