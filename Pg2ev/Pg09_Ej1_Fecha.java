@@ -1,4 +1,9 @@
 package Pg2ev;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 /*
  * Se le proporciona la clase Fecha. Atienda a la 
  * introducción en vídeo y a continuación incorpore 
@@ -68,14 +73,79 @@ class Fecha {
 		        if (this.getDia()!=f.getDia()) return this.getDia()-f.getDia();
 		        else return 0;
 		    }
+		 
+	   }
+	   
+	   
+	   public String diaSemana() {
+		   
+		   LocalDate fecha=LocalDate.of(this.getAnyo(), this.getMes(), this.getDia());
+		   DayOfWeek dia=fecha.getDayOfWeek();
+		   dia.toString();
+		   String [] diasemana= {"LUNES","MARTES","MIÉRCOLES","JUEVES","VIERNES","SÁBADO","DOMINGO"};
+		   if (dia.toString().equals("MONDAY")) return diasemana[0];
+		   else if (dia.toString().equals("TUESDAY")) return diasemana[1];
+		   else if (dia.toString().equals("WEDNESDAY")) return diasemana[2];
+		   else if (dia.toString().equals("THURSDAY")) return diasemana[3];
+		   else if (dia.toString().equals("FRIDAY")) return diasemana[4];
+		   else if (dia.toString().equals("SATURDAY")) return diasemana[5];
+		   else return diasemana[6];
 		   
 	   }
+	   
+	   public int diasHastav1(Fecha f) {
+		   //if (this.getAnyo()!=f.getAnyo()||this.getDia()!=f.getDia()||this.getMes()!=f.getMes())
+		   int diashasta=(int)ChronoUnit.DAYS.between(LocalDate.of(this.getAnyo(), this.getMes(), this.getDia()), LocalDate.of(f.getAnyo(), f.getMes(), f.getDia()));
+		   return diashasta;
+		    }
 	   
 	   private boolean bisiesto(int year) {
 			if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) return true;
 			return false;
 		}
 
+	   public int getDiaDelAnyo() {
+		   int diasPorMes[]={0,31,59,90,120,151,181,212,243,273,304,334};
+		   int diadelanyo=this.getDia()+diasPorMes[this.getMes()-1];
+		   
+		   if (this.bisiesto(this.getAnyo())==true&&this.getMes()>1) diadelanyo++;
+			   
+		   return diadelanyo;
+		   
+	   }
+	   
+	   public int diasHastav2(Fecha f) {
+		   int diashasta=0;
+		   
+		   if (this.getAnyo()!=f.getAnyo()) {
+	            if (this.getAnyo()<f.getAnyo()) {
+	                diashasta=f.getDiaDelAnyo()-this.getDiaDelAnyo();
+	                for (int i=this.getAnyo()+1;i<f.getAnyo();i++) {
+	                    if (this.bisiesto(i)) {
+	                        diashasta+=366;
+	                    } else {
+	                        diashasta+=365;
+	                    }
+	                }
+	            } else {
+	                diashasta=f.getDiaDelAnyo()-this.getDiaDelAnyo();
+	                for (int i=f.getAnyo();i<this.getAnyo();i++) {
+	                    if (this.bisiesto(i)) {
+	                        diashasta-=366;
+	                    } else { //Por aqui esta el error.
+	                        diashasta-=365;
+	                    }
+	                }
+	            }
+		   }
+		   else diashasta=f.getDiaDelAnyo()-this.getDiaDelAnyo(); //Asi debe ser la fórmula.
+		   
+		   return diashasta;
+	   }
+	   
+	   public String plusDias(int dias) {
+		   return "Fecha [dia=" + (dia+dias) + ", mes=" + mes + ", anyo=" + anyo + "]";
+	   }
 		@Override
 		public String toString() {
 			return "Fecha [dia=" + dia + ", mes=" + mes + ", anyo=" + anyo + "]";
