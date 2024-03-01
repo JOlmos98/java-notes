@@ -3,7 +3,6 @@ package Pg2ev;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-
 /*
  * Se le proporciona la clase Fecha. Atienda a la 
  * introducción en vídeo y a continuación incorpore 
@@ -40,8 +39,16 @@ class Fecha {
 		   this.dia=dia;
 		   this.mes=mes;
 		   this.anyo=anyo;
-		   
-		   
+	   }
+	   
+	   public Fecha(String fechaString) { //Esto recibiría un 01/02/1999
+		   int indexOfDia=fechaString.indexOf('/');
+	       dia=Integer.parseInt(fechaString.substring(0, indexOfDia));
+	       
+	       int indexOfMes=fechaString.lastIndexOf('/');
+	       mes=Integer.parseInt(fechaString.substring(indexOfDia+1, indexOfMes));
+	       
+	       anyo=Integer.parseInt(fechaString.substring(indexOfMes+1));
 	   }
 	   
 	   // ...
@@ -111,7 +118,6 @@ class Fecha {
 		   if (this.bisiesto(this.getAnyo())==true&&this.getMes()>1) diadelanyo++;
 			   
 		   return diadelanyo;
-		   
 	   }
 	   
 	   public int diasHastav2(Fecha f) {
@@ -145,6 +151,39 @@ class Fecha {
 	   
 	   public String plusDias(int dias) {
 		   return "Fecha [dia=" + (dia+dias) + ", mes=" + mes + ", anyo=" + anyo + "]";
+	   }
+	   
+	   public void next() {
+		   if (mes==12&&dia==31) {
+			   anyo=anyo+1;
+			   mes=1;
+			   dia=1;
+		   }
+		   else if (mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12) {
+			   if (dia==31) {
+				   mes=mes+1;
+				   dia=1;
+			   }
+			   else dia=dia+1;
+		   }
+		   else if (mes==4||mes==6||mes==9||mes==11) {
+			   if (dia==30) {
+				   mes=mes+1;
+				   dia=1;
+			   }
+			   else dia=dia+1;
+		   }
+		   else {
+			   if (bisiesto(anyo)&&dia==29) {
+				   mes=mes+1;
+				   dia=1;
+			   }
+			   else if (bisiesto(anyo)==false&&dia==28) {
+				   mes=mes+1;
+				   dia=1;
+			   }
+			   else dia=dia+1;
+		   }
 	   }
 		@Override
 		public String toString() {
