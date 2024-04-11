@@ -6,6 +6,7 @@ public class Contacto {
 	 * PULL PARA ACTUALIZAR EL LOCAL TENIENDO COMO REFERENCIA EL ONLINE Y
 	 * PUSH PARA ACTUALIZAR EL ONLINE TENIENDO COMO REFERENCIA EL LOCAL.
 	 */
+	//PEEEEEEEEEEEEEEERFECTO
 	private String ape1;
 	private String ape2;
 	private String nombre;
