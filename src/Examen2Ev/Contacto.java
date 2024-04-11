@@ -1,7 +1,7 @@
 package Examen2Ev;
 
 public class Contacto {
-
+	//COMENTARIO DE PRUEBA PARA GITHUB Y PC DE MESA.
 	private String ape1;
 	private String ape2;
 	private String nombre;
