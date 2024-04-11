@@ -9,8 +9,6 @@ public class Principal {
 		
 		ArrayList<Contacto> ALC=new ArrayList();
 		
-		
-		
 	}
 
 	public ArrayList<Contacto> filtrar(ArrayList<Contacto> contactos){
