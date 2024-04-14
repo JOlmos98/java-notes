@@ -1,12 +1,9 @@
 package Examen2Ev;
 
+import java.util.Objects;
+
 public class Contacto {
-	//COMENTARIO DE CONFIRMACION DEL PUTO EXITO
-	/*
-	 * PULL PARA ACTUALIZAR EL LOCAL TENIENDO COMO REFERENCIA EL ONLINE Y
-	 * PUSH PARA ACTUALIZAR EL ONLINE TENIENDO COMO REFERENCIA EL LOCAL.
-	 */
-	//PEEEEEEEEEEEEEEERFECTO
+
 	private String ape1;
 	private String ape2;
 	private String nombre;
@@ -57,5 +54,19 @@ public class Contacto {
 	public String toString() {
 		return ape1 + " " + ape2 + ", " + nombre + ", DNI: " + dni;
 	}
-
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(ape1, ape2, dni, nombre);
+	}
+	//Asigna un código único a cada instancia de la clase Contacto.
+	public boolean equals(Contacto c) {
+		if (this.getDni().equals(c.getDni())) return true;
+		else return false;
+	}
+	//El equals dice si son iguales o no (devuelve true o false).
+	public int compareTo(Contacto c) {
+		return this.getApe1().compareTo(c.getApe1());
+	}
+	//El compareTo los clasifica y les da un orden, en este caso por el primer apellido.
 }
