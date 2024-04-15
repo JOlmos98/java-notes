@@ -1,6 +1,7 @@
 package Examen2Ev;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Cita {
@@ -9,7 +10,7 @@ public class Cita {
 	
 	int id;
 	LocalDate fecha;
-	String estado;
+	String estado; //Pendiente, Realizada o Cancelada
 	String observaciones;
 	
 	//Constructor:
@@ -30,6 +31,32 @@ public class Cita {
 	}
 
 	//Métodos:
+	
+	public static ArrayList<Cita> filtrarPendientesProxMes(ArrayList<Cita> alc){
+		ArrayList<Cita> PendientesProxMes=new ArrayList();
+		
+		for (int i=0;i<alc.size();i++) {
+			if (alc.get(i).getEstado().equalsIgnoreCase("Pendiente")&&alc.get(i).getFecha().isAfter(LocalDate.now().minusMonths(3))) {
+				PendientesProxMes.add(alc.get(i));
+			}
+		}
+		
+		return PendientesProxMes;
+	}
+	
+	public static ArrayList<Cita> filtrarConObservacionesEn3Anyos(ArrayList<Cita> alc){
+		ArrayList<Cita> Obs3anyos=new ArrayList();
+		
+		for (int i=0;i<alc.size();i++) {
+			if (alc.get(i).getObservaciones()!=null&&alc.get(i).getFecha().isAfter(LocalDate.now().minusYears(3))) {
+				Obs3anyos.add(alc.get(i));
+			}
+		}
+		
+		return Obs3anyos;
+	}
+	
+	
 	
 	@Override
 	public int hashCode() {
