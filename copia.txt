@@ -1,0 +1,1 @@
+Hola, mundo! Esto debería grabarse en la copia, pero no en el original.
