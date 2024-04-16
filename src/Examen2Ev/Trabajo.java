@@ -32,13 +32,17 @@ public class Trabajo {
 	}
 	
 	//Métodos:
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Trabajo [empresa=" + empresa + ", fechainicio=" + fechainicio + ", fechafinprevista=" + fechafinprevista
+				+ ", fechafinreal=" + fechafinreal + ", importe=" + importe + ", descripcion=" + descripcion + "]";
+	}
+
 	public EmpresaTrabajo getEmpresa() {
 		return empresa;
 	}
-
+	
 	public void setEmpresa(EmpresaTrabajo empresa) {
 		this.empresa = empresa;
 	}

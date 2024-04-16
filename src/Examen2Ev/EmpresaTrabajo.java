@@ -23,10 +23,10 @@ public class EmpresaTrabajo {
 	
 	public EmpresaTrabajo() {}
 	
-	public EmpresaTrabajo(String nombre, double tasacumplimiento, ArrayList<Trabajo> trabajos) {
+	public EmpresaTrabajo(String nombre, double tasacumplimiento/*, ArrayList<Trabajo> trabajos*/) {
 		this.nombre=nombre;
 		this.tasacumplimiento=tasacumplimiento;
-		this.trabajos=trabajos;
+		//this.trabajos=trabajos;
 	}
 	
 	//Métodos:
@@ -37,8 +37,8 @@ public class EmpresaTrabajo {
 		 * y que los sume (dias entregado antes de tiempo) o reste 
 		 * (dias entregado tarde).
 		 */
-		int contpositivos=0;
-		int contnegativos=0;
+		double contpositivos=0;
+		double contnegativos=0;
 		for (int i=0;i<this.getTrabajos().size();i++) {
 			if ((ChronoUnit.DAYS.between(this.getTrabajos().get(i).getFechafinreal(), this.getTrabajos().get(i).getFechafinprevista()))>0) {
 				contpositivos=contpositivos+(int)(ChronoUnit.DAYS.between(this.getTrabajos().get(i).getFechafinreal(), this.getTrabajos().get(i).getFechafinprevista()));
