@@ -1,1 +1,1 @@
-Hola, mundo! Esto debería grabarse en la copia, pero no en el original.
+Tal y cual nosek, eso debería copiarse, y si le pongo true se va a escribir lo del JOP a continuación:

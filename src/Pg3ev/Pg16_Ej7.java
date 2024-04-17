@@ -7,65 +7,32 @@ import java.io.IOException;
 
 public class Pg16_Ej7 {
 
+	/*
+	 * En este ejercicio se nos proporciona un bloque de código en comentario,
+	 * al quitar el comentario el código da error, sencillamente hay que meter 
+	 * todo el bloque en un try y escribir el catch.
+	 */
 	public static void main(String[] args) {
 		copiaFichero("original.txt", "copia.txt");
 	}
-
+	
 	public static void copiaFichero(String f1, String f2) {
-
 		
-		
+		try {
+		  FileReader fr = new FileReader(f1);
+		  FileWriter fw = new FileWriter(f2);
 		  
-		  FileWriter fw = null;
-		try {
-			fw = new FileWriter(f2);
-		    fw.write("Hola, mundo! Esto debería grabarse en la copia, pero no en el original.");
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		  FileReader fr = null;
-		try {
-			fr = new FileReader(f1);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		  int c = 0;
-		try {
-			c = fr.read();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
+		  int c=fr.read(); 
 		  while ( c!= -1 ) {
-			  try {
-				fw.write(c);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} 
-			  try {
-				c=fr.read();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} 
+			  fw.write(c); 
+			  c=fr.read(); 
 		  }
 		  
-		  try {
-			fw.close();
+		  fw.close(); 
+		  fr.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-		  try {
-			fr.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("ERROR probablemente en el tema de la E/S: "+e);
 		}
-		 
 		 
 	}
 
