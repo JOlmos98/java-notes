@@ -1,6 +1,6 @@
 package Pg3ev;
 
-public class Pg16_Ej10 {
+public class Pg15_Ej10 {
 
 	public static void main ( String[] args )
 	 {

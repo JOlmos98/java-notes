@@ -1,50 +1,18 @@
 package Pg3ev;
-
-import java.util.Scanner;
-
+/*
+ * Desarrolle el juego de los barcos. Sobre un mar simulado mediante una matriz de 6x6, 
+el programa ubicará aleatoriamente un barco, que ocupará 4 celdas de la matriz, en 
+posición horizontal o vertical. El usuario introducirá coordenadas y, en cada disparo, 
+será informado de si acierta o falla. El usuario puede cometer hasta tres errores. 
+Finalmente se le informará de si ha ganado o perdido.
+ */
 public class Pg16_Ej3 {
-	
-	/*
-	 * En este ejercicio 3 tampoco hay que resolver nada,
-	 * sencillamente muestra lo mismo que el ejercicio 2
-	 * pero desarrollado en un método, el método es leeEntero();.
-	 * Declara un int que es igual al método, y después, fuera
-	 * del méttodo, si todo ha ido bien y no hay excepciones, 
-	 * lo transforma en positivo si no lo es y lo muestra como
-	 * valor absoluto. 
-	 * 
-	 * Es decir, el método es solo el control de la excepción, el resto
-	 * del programa es fuera del método.
-	 */
-	public static void main (String[] args) {
 
-		   int a=leeEntero();
-
-		   if (a<0) a=-a;
-		   System.out.println("El valor absoluto es "+a);
-		 }
-	
-	public static int leeEntero() {
-				
-			Scanner sc = new Scanner(System.in);
-
-			int a;
-
-			System.out.print("Introduzca un n�mero y yo le indicar� su valor absoluto ");
-
-			try {
-				a = sc.nextInt();
-			}
-			catch (Exception ex) {
-				System.out.println();
-				System.out.println("Problemas. Probablemente no se introdujo un valor num�rico");
-				System.out.println("Se considerar� introducido valor 1");
-				System.out.println("Informacion t�cnica: " + ex.getMessage());
-				System.out.println();
-				a = 1;
-			}
-			return a;
-
-		}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Creo que esto lo dejo pendiente porque ya lo hice, lo suyo es hacerlo a base de métodos y excepciones y tal.
+		//Bueno, postponemos estos ejercicios repetidos que sirven muy bien como repaso.
+	}
 
 }

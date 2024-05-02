@@ -1,8 +1,13 @@
 package Pg3ev;
 
 import java.util.Scanner;
-
-public class Pg16_Ej4 {
+/*
+ * Ahora, vea cómo en Ejercicio04.java tratamos la 
+ * excepción en el método llamador. Si el método 
+ * llamador no la trata la puede capturar el previo 
+ * (y así hasta main . Observe Ejercicio05.java y Ejercicio06.java.
+ */
+public class Pg15_Ej4 {
 
 	/*
 	 * Esto es más de lo mismo, no hay nada que resolver, sencillamente

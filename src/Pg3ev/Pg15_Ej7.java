@@ -4,8 +4,15 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
-public class Pg16_Ej7 {
+/*
+ * Intente compilar el archivo Ejercicio07.java. Asegúrese de tener el archivo original.txt 
+en el directorio del proyecto. Un montón de errores relacionados con excepciones en 
+el método copiaFichero(). Resulta que el método puede provocar algún tipo de 
+excepción que forzosamente hay que tener en cuenta. Resuélvalo (Ejercicio8.java) 
+agregando en copiaFichero() los bloques try{} catch{}. Después, compruebe también el 
+funcionamiento en ausencia del archivo original.txt
+ */
+public class Pg15_Ej7 {
 
 	/*
 	 * En este ejercicio se nos proporciona un bloque de código en comentario,

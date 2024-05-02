@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-public class Pg16_Ej8 {
+public class Pg15_Ej8 {
 /*
  * Esto es el 7 medio corregido.
  */

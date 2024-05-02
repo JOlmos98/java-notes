@@ -2,7 +2,7 @@ package Pg3ev;
 
 import java.util.Scanner;
 
-public class Pg16_Ej5 {
+public class Pg15_Ej5 {
 
 	/*
 	 * En este caso el método sigue siendo el tema de scanner y

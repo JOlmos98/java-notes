@@ -1,47 +1,42 @@
 package Pg3ev;
-
-import java.util.Scanner;
-
+/*
+ * En el desarrollo de un juego similar al buscaminas se desea desarrollar el método 
+public static int celdasSeguras(char[][] zonaJuego) {} donde zonaJuego es un espacio en 
+el que cada celda representa una mina (‘*’), una zona libre (‘ ‘) o una zona ocupada. Se 
+considera una celda segura a aquella celda libre que no es vecina (en cualquier 
+dirección) de una mina. Desarrolle el método celdasSeguras(). 
+ */
 public class Pg16_Ej2 {
-	/*
-	 * Copy paste del ejercicio 2, no hay que resolverlo,
-	 * sencillamente nos muestra como se resuelve el 1,
-	 * que ya lo he resuelto yo previamente de otra forma en 
-	 * el 1, pero aquí lo hace más correctamente.
-	 * 
-	 * Aquí modifica el valor para que se reproduzca todo el codigo y 
-	 * además nos aporta información sobre el error en la linea
-	 * que imprime "Información técnica". Corrijo, no aporta ninguna
-	 * información extra porque el método e.getMessage() nos devuelve
-	 * null, pongamos un String o pongamos un double sigue devolviendo
-	 * null.
-	 * 
-	 * Parece que poner NumberFormatException y Exception hace lo mismo.
-	 */
-	 public static void main (String[] args)
-	 {
-	   Scanner sc = new Scanner(System.in);
 
-	   int    a;
-
-	   System.out.print("Introduzca un n�mero y yo le indicar� su valor absoluto ");
-
-		try {
-			a = sc.nextInt();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char[][] tablero = { //Tablero de ejemplo.
+			    {' ', ' ', '1', '1', '1'},
+			    {'1', '2', '3', '*', '1'},
+			    {'1', '*', '*', '2', '1'},
+			    {'1', '2', '2', '1', ' '},
+			    {' ', ' ', ' ', ' ', ' '}
+			};
+		/*
+		 * Las casillas seguras serían la 0.0/0.1/3.4/4.0/4.1/4.2/4.3;
+		 */
+		if (tablero[2][2]!='1') System.out.println("El valor de las coordenadas 2.2 es distinto de 1.");
+		//celdasSeguras(tablero);
+		System.out.println(celdasSeguras(tablero));
+	}
+	
+	public static int celdasSeguras(char[][] zonaJuego) {
+		//El zonaJuego es básicamente el tablero. Un array bidimensional de las casillas.
+		int a=0;
+		for (int i=0;i<zonaJuego.length;i++) {
+			for (int b=0;b<zonaJuego.length;b++) {
+				if (zonaJuego[i][b]==' ') {
+					System.out.println("La casilla ["+i+"]["+b+"] es una casilla segura.");
+					a++;
+				}
+			}
 		}
-		catch (Exception ex) {
-			System.out.println();
-			System.out.println("Problemas. Probablemente no se introdujo un valor num�rico");
-			System.out.println("Se considerar� introducido valor 1");
-			System.out.println("Informacion t�cnica: " + ex.getMessage());
-			System.out.println();
-			a = 1;
-		}
-
-	   if (a<0) a=-a;
-	   System.out.println("El valor absoluto es "+a);
-	   
-	   sc.close();
-	 }
+		return a;
+	}
 
 }

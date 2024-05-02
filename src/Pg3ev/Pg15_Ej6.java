@@ -2,7 +2,7 @@ package Pg3ev;
 
 import java.util.Scanner;
 
-public class Pg16_Ej6 {
+public class Pg15_Ej6 {
 
 	/*
 	 * Vale, en el ejercicio anterior no tenia sentido el .leeEnteroIntermediario()
