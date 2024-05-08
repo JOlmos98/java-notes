@@ -1,0 +1,13 @@
+ACIERTO, palabra preguntada: raton, Respuesta correcta: mouse, Respuesta del usuario: mouse.
+ACIERTO, palabra preguntada: pegatina, Respuesta correcta: sticker, Respuesta del usuario: sticker.
+ACIERTO, palabra preguntada: teclado, Respuesta correcta: keyboard, Respuesta del usuario: keyboard.
+ERROR, palabra preguntada: nube, Respuesta correcta: cloud, Respuesta del usuario: idkkk.
+ACIERTO, palabra preguntada: flor, Respuesta correcta: flower, Respuesta del usuario: flower.
+ACIERTO, palabra preguntada: naranja, Respuesta correcta: orange, Respuesta del usuario: orange.
+ACIERTO, palabra preguntada: amigo, Respuesta correcta: friend, Respuesta del usuario: friend.
+ERROR, palabra preguntada: hola, Respuesta correcta: hello, Respuesta del usuario: idk bro.
+ACIERTO, palabra preguntada: cargador, Respuesta correcta: charger, Respuesta del usuario: charger.
+ACIERTO, palabra preguntada: pantalla, Respuesta correcta: screen, Respuesta del usuario: screen.
+ACIERTO, palabra preguntada: gafas, Respuesta correcta: glasses, Respuesta del usuario: glasses.
+ACIERTO, palabra preguntada: libro, Respuesta correcta: book, Respuesta del usuario: book.
+WIN

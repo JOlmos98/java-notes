@@ -1,0 +1,5 @@
+ACIERTO, palabra preguntada: raton, Respuesta: mouse
+ACIERTO, palabra preguntada: pegatina, Respuesta: sticker
+ACIERTO, palabra preguntada: teclado, Respuesta: keyboard
+ACIERTO, palabra preguntada: nube, Respuesta: cloud
+WIN
