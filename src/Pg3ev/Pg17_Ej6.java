@@ -27,7 +27,6 @@ public class Pg17_Ej6 { //Este es el copy paste de la v2.
      st.executeUpdate("INSERT INTO TClientes VALUES (20,'pwjuan','juan gomez')");
      st.executeUpdate("INSERT INTO TClientes VALUES (30,'pwjesus','Jesús Olmos')");
 
-     
      ResultSet rs = st.executeQuery("SELECT * FROM TClientes");
      while(rs.next())
      {
