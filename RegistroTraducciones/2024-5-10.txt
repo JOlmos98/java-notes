@@ -1,0 +1,3 @@
+Palabra elegida: Arm, en Español: Brazo, en Inglés: Arm.
+Palabra elegida: Bleistift, en Español: Lápiz, en Inglés: Pencil.
+Palabra elegida: Tier, en Español: Animal, en Inglés: Animal.
