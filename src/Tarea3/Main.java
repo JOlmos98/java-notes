@@ -71,7 +71,7 @@ public class Main {
 					System.out.println("Palabra elegida: "+palabras.get(i).getPalaleman()+", en Español: "+palabras.get(i).getPalespanyol()+", en Inglés: "+palabras.get(i).getPalingles()+".");
 					archivo.write("Palabra elegida: "+palabras.get(i).getPalaleman()+", en Español: "+palabras.get(i).getPalespanyol()+", en Inglés: "+palabras.get(i).getPalingles()+".");
 					archivo.newLine();
-				}
+				} 
 			}
 			if (introducida.equalsIgnoreCase("exit")) {System.out.println("Ha introducido EXIT para terminar el programa.");}
 			if (valida==false&&!introducida.equalsIgnoreCase("exit")) System.out.println("Palabra NO válida.");

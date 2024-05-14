@@ -8,7 +8,7 @@ import java.io.FileWriter;
  * Atienda al uso de BufferedReader y BufferedWriter, 
  * clases habituales para trabajar con archivos de texto. 
  */
-public class Pg17_Ej4 {
+public class Pg17_Ej4_Buffered {
 
 	 public static void main (String[] args) throws Exception  {
 		  
@@ -36,7 +36,7 @@ public class Pg17_Ej4 {
 	    while (miString!=null )
 	    {
 	        fDestino.write(miString);
-	        fDestino.newLine(); 
+	        fDestino.newLine();
 	        miString = fOrigen.readLine();
 	    }
 		

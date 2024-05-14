@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class Pg17_Ej7 {
+public class Pg17_Ej7_BBDD {
 	
     private static String url = "jdbc:sqlite:.\\src\\basededatos\\BDiccionario";
     private static String usuario = "root";
