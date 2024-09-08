@@ -1,4 +1,7 @@
 package Pg2ev;
+
+import java.util.ArrayList;
+
 /*
  * Desarrolle FechaPlus, que hereda de Fecha, 
  * y sobrescriba el método toString() de modo 
@@ -11,8 +14,9 @@ public class Pg14_Ej2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*ArrayList<Contacto> alc=new ArrayList();
+		ArrayList<Contacto> alc=new ArrayList();
 		
+		Contacto contacto1=new Contacto("Jesús", "Olmos", "Soler", "658483958", "Vereda de los Matas", 25, "49338225M");
 		alc.add(new Contacto("Jesús", "Olmos", "Soler", "658483958", "Vereda de los Matas", 25, "49338225M"));
 		alc.add(new Contacto("María", "González", "López", "689204517", "Calle Mayor", 30, "72496183N"));
 		alc.add(new Contacto("Pedro", "Martínez", "Sánchez", "636721894", "Avenida de la Paz", 35, "82416937J"));
@@ -29,7 +33,7 @@ public class Pg14_Ej2 {
 			//System.out.println(alc.get(i).toString());		
 		}
 		
-		for (int i=0;i<alc.size();i++) {
+		/*for (int i=0;i<alc.size();i++) {
 			System.out.println(alc.f	
 		}*/
 	}

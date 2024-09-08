@@ -13,38 +13,54 @@ public class EVENT01botones {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FrameEvent miventana=new FrameEvent();
+		LaminaMarcoJFrame miventana=new LaminaMarcoJFrame();
 		miventana.setVisible(true);
 	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////
 
-class FrameEvent extends JFrame{
+class LaminaMarcoJFrame extends JFrame{
 	
-	FrameEvent(){
+	/*
+	 * Creamos la clase para el marco, la clase hereda de JFrame
+	 * que es la interfaz que nos permite crear el marco, la ventana.
+	 */
+	LaminaMarcoJFrame(){ //Con este constructor creamos la ventana, el marco.
 		
 		setTitle("Ventana de colores");
 		setBounds(500,200,500,500);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		/*
+		 * Métodos que establecen el título, las dimensiones y que el 
+		 * el programa se cierre al cerrar la ventana.
+		 */
 		
 		//setVisible(true);
 		PanelEvent mipanel=new PanelEvent();
+		//Creamos un objeto de tipo PanelEvent, clase que ya hemos definido abajo.
+		//Con esa clase creamos los botones y le damos el significado.
 		add(mipanel);
+		//Con esta última línea sencillamente añadimos el panel en sí con eventos al marco creado anteriormente
 	}
 }
 
 class PanelEvent extends JPanel implements ActionListener{
 	
+	/*
+	 * Esta clase PanelEvent hereda de la clase abstracta JPanel e implementa la interfaz ActionListener.
+	 * Habiendo heredado de JPanel usamos JButton para crear los botones en las tres líneas de abajo, dándole
+	 * un nombre en el String como parámetro al crear el objeto JButton.
+	 */
 	JButton bluebutton=new JButton("Azul");
 	JButton redbutton=new JButton("Rojo");
 	JButton greenbutton=new JButton("Verde");
 	
-	PanelEvent(){
+	PanelEvent(){//Con este método creamos el panel donde se ejecutan los eventos.
 		
 		add(bluebutton);
-		bluebutton.addActionListener(this);
-		//setSize(80,50); este método no funciona con los botones.
+		bluebutton.addActionListener(this); //El this hace referencia al JButton bluebutton.
+		//setSize(80,50); este método no funciona con los botones. Se usa el de abajo.
 		bluebutton.setPreferredSize(new Dimension(80, 30)); 
 		// Establecer un tamaño preferido al botón
 		
