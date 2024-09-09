@@ -1,0 +1,3 @@
+Un sencillo archivo
+con tres l�neas 
+lineas.txt

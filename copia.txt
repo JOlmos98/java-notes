@@ -1,0 +1,1 @@
+Esta es la COPIA.txt del original, el que leería si introducimos como parámetro 1.

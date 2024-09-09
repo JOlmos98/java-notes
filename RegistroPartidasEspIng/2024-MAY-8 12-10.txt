@@ -1,0 +1,10 @@
+ERROR, palabra preguntada: raton, Respuesta: mouse
+ACIERTO, palabra preguntada: pegatina, Respuesta: sticker
+ACIERTO, palabra preguntada: teclado, Respuesta: keyboard
+ACIERTO, palabra preguntada: nube, Respuesta: cloud
+ERROR, palabra preguntada: flor, Respuesta: flower
+ACIERTO, palabra preguntada: naranja, Respuesta: orange
+ACIERTO, palabra preguntada: amigo, Respuesta: friend
+ACIERTO, palabra preguntada: hola, Respuesta: hello
+ERROR, palabra preguntada: cargador, Respuesta: charger
+LOSE

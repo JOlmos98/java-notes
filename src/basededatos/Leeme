@@ -1,0 +1,7 @@
+
+Base de datos BClientes
+creada con sqlite3 
+a partir del script BClientes.sql
+ejecutando en el intérprete de comandos
+
+sqlite3 BDiccionario < BClientes.sql

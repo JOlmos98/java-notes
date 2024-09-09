@@ -1,0 +1,10 @@
+Key=Llave
+Armor=Armadura
+Kiss=Beso
+System=Sistema
+Rust=Oxido
+Screen=Pantalla
+User=Usuario
+Query=Consulta
+Developer=Desarrollador
+Program=Programa
