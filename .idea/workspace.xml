@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c03e81e-7624-4c7a-850f-d7a94d92b324" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/JT03_EVENT/EVENT01botones.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/JT03_EVENT/EVENT01botones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/JT03_EVENT/EVENT02eventoventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/JT03_EVENT/EVENT02eventoventana.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/JT03_EVENT/FrameEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/JT03_EVENT/PanelEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/JT03_EVENT/PanelEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JT03_EVENT/EVENT01botones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JT03_EVENT/EVENT01botones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JT03_EVENT/EVENT02eventoventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JT03_EVENT/EVENT02eventoventana.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ewwkhWOU2Td5dOolIPrDf0ZA4y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/soler/eclipse-workspace/ProyectoSpringBOOT",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c03e81e-7624-4c7a-850f-d7a94d92b324" name="Changes" comment="" />
+      <created>1712829093120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712829093120</updated>
+    </task>
+    <servers />
+  </component>
+</project>
