@@ -34,5 +34,5 @@ public class clase_DataInputStream_DataOutputStream {
 			System.err.println("Vaya, error.");
 		}
 		System.out.println("El programa ha terminado.");
-	}
+	}	
 }
