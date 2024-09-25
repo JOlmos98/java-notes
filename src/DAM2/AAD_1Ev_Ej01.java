@@ -2,7 +2,7 @@ package DAM2;
 
 import java.util.ArrayList;
 
-public class AAD1Ev_Ej01 {
+public class AAD_1Ev_Ej01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -28,6 +28,8 @@ public class AAD1Ev_Ej01 {
         
 		//5 José, 4 Samuel, 3 Pedro, 2 Antonio.
 		System.out.println(pal);
+		
+		System.out.println(AAD_1Ev_Ej01.palabrasOrdenadasSinRepeticiones(pal));
 	}
 	
 	public static ArrayList<String> palabrasOrdenadasSinRepeticiones(ArrayList<String> palabras){
@@ -39,22 +41,33 @@ public class AAD1Ev_Ej01 {
 				arOrdenadas.add(palabras.get(i));
 				contador.add(1); //Añade un elemento nuevo establecido en 1.
 			} else {
-				int index=arOrdenadas.indexOf(i);
+				int index=arOrdenadas.indexOf(palabras.get(i));
 				contador.set(index, contador.get(index)+1);
 				//Al encontrar una palabra repetida, va a su contador localizándolo con 
 				//arOrdenadas.indexOf(i) y le suma uno con contador.set(index, contador.get(index)+1.
 			}
-			for (int a=0;a<palabras.size();a++) {
-				
-			}
 		}
 		
+		for (int i=0;i<arOrdenadas.size();i++) {
+			for (int a=0;a<arOrdenadas.size();a++) {
+				if (contador.get(a)<contador.get(i)) {
+					int tempI=contador.get(i);
+					contador.set(i, contador.get(a));
+					contador.set(a, tempI);
+					
+					String tempS=arOrdenadas.get(i);
+					arOrdenadas.set(i, arOrdenadas.get(a));
+					arOrdenadas.set(a, tempS);
+				}
+			}
+		}
 		return arOrdenadas;
 	}
 	
-	//////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////	
 	
-	
+	//Ejercicio entregado a medio hacer a chatGPT y terminado por él:
     public static ArrayList<String> palabrasOrdenadasSinRepeticionesGPT(ArrayList<String> palabras) {
         // Crear una lista donde almacenamos palabras sin repetir
         ArrayList<String> palabrasUnicas = new ArrayList<>();
@@ -94,30 +107,7 @@ public class AAD1Ev_Ej01 {
         return palabrasUnicas;
     }
 	
-    /*public static ArrayList<String> palabrasOrdenadasSinRepeticiones(ArrayList<String> palabras) {
-        // Mapa para contar las apariciones de cada palabra
-        HashMap<String, Integer> conteoPalabras = new HashMap<>();
 
-        // Contamos las apariciones de cada palabra
-        for (String palabra : palabras) {
-            conteoPalabras.put(palabra, conteoPalabras.getOrDefault(palabra, 0) + 1);
-        }
-
-        // Creamos un ArrayList con las palabras únicas (sin repeticiones)
-        ArrayList<String> palabrasUnicas = new ArrayList<>(conteoPalabras.keySet());
-
-        // Ordenamos las palabras según el número de apariciones
-        Collections.sort(palabrasUnicas, new Comparator<String>() {
-            @Override
-            public int compare(String palabra1, String palabra2) {
-                // Comparamos las palabras según el número de apariciones (de menor a mayor)
-                return conteoPalabras.get(palabra2).compareTo(conteoPalabras.get(palabra1));
-            }
-        });
-
-        // Devolvemos la lista de palabras ordenadas por el número de apariciones
-        return palabrasUnicas;
-    }*/
 	
 	
 }
