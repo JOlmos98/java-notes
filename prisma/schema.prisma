@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                   Int      @id @default(autoincrement())
+  name                 String
+  calefaccionOffset    Float    @default(0) // Offset Temperatura en ºC
+  calefaccionMinima    Float    @default(1) // Calefacción mínima en %
+  calefaccionMaxima    Float    @default(100) // Calefacción máxima en %
+  rango                Float    @default(10) // Rango en ºC
+  configs              Config[] // Relación uno a muchos con Config
+}
+
+model Config {
+  id                   Int      @id @default(autoincrement())
+  userId               Int
+  sondas               String   // Asignado o No asignado
+  rele                 String   @default("No asignado") // Nombre del Relé o "No asignado"
+  histeresis           Float    @default(0.5) // Histéresis en ºC
+  temperaturaSonda     Float    @default(-10) // Temperatura de la sonda en ºC
+  porcentaje           Float    @default(0) // Porcentaje en %
+  releAsignado         String?  // Relé asignado (opcional)
+  activado             Boolean   @default(false) // Si/No para activado
+  user                 User     @relation(fields: [userId], references: [id])
+}

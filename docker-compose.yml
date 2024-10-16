@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  01app:
+    image: 01app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
