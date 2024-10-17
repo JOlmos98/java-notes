@@ -11,10 +11,20 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/(general)/userData/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(general)/userData/page.js"
+    ],
     "/(general)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(general)/layout.js"
+    ],
+    "/(general)/howtouse/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(general)/howtouse/page.js"
     ],
     "/(general)/pricing/page": [
       "static/chunks/webpack.js",
@@ -25,11 +35,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(general)/contact/page.js"
-    ],
-    "/(general)/howtouse/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(general)/howtouse/page.js"
     ]
   }
 }

@@ -29,6 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <footer className="row-start-1 flex gap-6 flex-wrap items-center justify-center"><a href="https://www.cticontrol.com">CTIcontrol</a></footer>
       </body>
     </html>
   );

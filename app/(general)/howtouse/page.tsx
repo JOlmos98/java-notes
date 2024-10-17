@@ -17,9 +17,6 @@ export default function AboutPage(){
           <span className="text-4xl">Aquí iría una breve guía sobre el uso del software, modificación de los parámetros, qué hace cada uno, etcétera, un README más reducido y simplificado.
           </span>
         </main>
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-          <p>Borramos el footer.</p>
-        </footer>
       </div>
     )
 }

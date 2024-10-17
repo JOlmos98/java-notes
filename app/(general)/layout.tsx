@@ -10,7 +10,7 @@ export default function GeneralLayout({
         <>
         <Navbar />
         <div>
-            <h1>
+            <h1 className="flex text-xs">
                 Esto es el Layout de (general).
                 {children}
             </h1>
