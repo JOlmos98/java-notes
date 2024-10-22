@@ -48,21 +48,43 @@ export default function UserIn() {
                 <span className="flex bg-blue-300 bg-opacity-30 p-5 m-2 rounded-3xl text-7xl">
                     Bienvenido {userData.name}!
                 </span>
-                <div>
-                    <h2>Datos del Usuario</h2>
-                    <p>Calefacción Offset: {userData.calefaccionOffset}</p>
-                    <p>Calefacción Mínima: {userData.calefaccionMinima}</p>
-                    <p>Calefacción Máxima: {userData.calefaccionMaxima}</p>
-                    <p>Rango: {userData.rango}</p>
-                    <h2>Configuraciones:</h2>
+                
+                <div className="flex flex-col bg-blue-100 bg-opacity-70 p-8 m-2 rounded-3xl shadow-lg w-full sm:w-auto">
+                    <h2 className="text-4xl mb-6 font-semibold text-blue-900">Datos del Usuario</h2>
+    
+                    <table className="table-auto w-full text-left text-blue-800">
+                        <tbody>
+                            <tr className="border-b-2 border-gray-500">
+                                <td className="p-4 font-medium text-xl">Calefacción Offset:</td>
+                                <td className="p-4 text-xl">{userData.calefaccionOffset}</td>
+                            </tr>
+                            <tr className="border-b-2 border-gray-500">
+                                <td className="p-4 font-medium text-xl">Calefacción Mínima:</td>
+                                <td className="p-4 text-xl">{userData.calefaccionMinima}</td>
+                            </tr>
+                            <tr className="border-b-2 border-gray-500">
+                                <td className="p-4 font-medium text-xl">Calefacción Máxima:</td>
+                                <td className="p-4 text-xl">{userData.calefaccionMaxima}</td>
+                            </tr>
+                            <tr className="border-b-2 border-gray-500">
+                                <td className="p-4 font-medium text-xl">Rango:</td>
+                                <td className="p-4 text-xl">{userData.rango}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                    <h2 className="text-3xl mt-8 mb-4 font-semibold text-blue-900">Configuraciones:</h2>
+    
                     {userData.configs && userData.configs.length > 0 ? (
-                        <ul>
+                        <ul className="list-disc pl-8 text-blue-800">
                             {userData.configs.map((config: any) => (
-                                <li key={config.id}>{JSON.stringify(config)}</li>
+                                <li key={config.id} className="py-1">
+                                    {JSON.stringify(config)}
+                                </li>
                             ))}
                         </ul>
                     ) : (
-                        <p>No hay configuraciones disponibles.</p>
+                        <p className="text-blue-600">No hay configuraciones disponibles.</p>
                     )}
                 </div>
             </main>
