@@ -45,9 +45,9 @@ export default function Home() {
   };
 
 
-  //HTML que define la web:
+  //HTML que define la web: [10px_1fr_10px]
   return (
-    <div className="grid grid-rows-[10px_1fr_10px] items-center justify-items-center min-h-screen p-8 pb-2 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[1fr_auto] items-center justify-items-center min-h-screen p-8 pb-2 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <h1 className="flex p-3 gap-16 rounded-3xl  text-8xl">CTIcontrol</h1>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <span className="flex text-3xl">Bienvenido a la interfaz de usuario de [insertar nombre de hardware].</span>

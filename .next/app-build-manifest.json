@@ -21,20 +21,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(general)/layout.js"
     ],
-    "/(general)/howtouse/page": [
+    "/(general)/changeValue/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(general)/howtouse/page.js"
-    ],
-    "/(general)/pricing/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(general)/pricing/page.js"
-    ],
-    "/(general)/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(general)/contact/page.js"
+      "static/chunks/app/(general)/changeValue/page.js"
     ]
   }
 }
