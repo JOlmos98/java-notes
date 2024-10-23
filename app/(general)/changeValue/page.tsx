@@ -1,19 +1,32 @@
 "use client";
-import { CheckIcon } from "@primer/octicons-react"
-import { XIcon } from "@primer/octicons-react"
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
+import { CheckIcon, XIcon } from "@primer/octicons-react";
+import { useState, useEffect } from 'react';
 
+export default function ChangeValue() {
+    const router = useRouter();
+    const searchParams = useSearchParams();
 
-export default function ChangeValue(){
-    const router=useRouter();
-    const [value, setValue] = useState(""); // Estado para el valor ingresado
+    // Usar un estado para los parámetros, asegurando que no sean null
+    const [parameter, setParameter] = useState<string>("");
+    const [userId, setUserId] = useState<string>("");
+    const [value, setValue] = useState("");
 
+    // Este efecto se ejecuta cuando searchParams cambia
+    useEffect(() => {
+        if (searchParams) {
+            const param = searchParams.get('parameter');
+            const id = searchParams.get('userId');
+            setParameter(param || ""); // Asigna el valor o una cadena vacía si es null
+            setUserId(id || ""); // Asigna el valor o una cadena vacía si es null
+        }
+    }, [searchParams]);
 
     const handleCancel = () => {
-        router.back(); // Vuelve a la página anterior
+        router.back();
     };
-    //const handleEdit
+
     const handleCheck = async () => {
         try {
             const response = await fetch('/api/updateValue', {
@@ -21,24 +34,24 @@ export default function ChangeValue(){
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ value }), // Enviar el nuevo valor
+                body: JSON.stringify({ value, parameter, userId }), // Enviar el nuevo valor, el parámetro y el userId
             });
 
             if (!response.ok) {
                 throw new Error('Error al actualizar el valor en la base de datos.');
             }
 
-            // Redirigir a la página anterior o donde sea necesario
-            router.back(); // Cambia la ruta según sea necesario
+            // Redirigir a la página userData con el userId
+            router.push(`/userData?userId=${encodeURIComponent(userId)}`);
         } catch (error) {
             console.error(error); // Manejo de errores
         }
     };
 
     return (
-<div className="grid grid-rows-[20px_1fr_20px] min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-    <main className="flex flex-col gap-8 row-start-2 items-center justify-center sm:items-start">
-        <span className="flex flex-col items-center bg-blue-300 bg-opacity-30 p-5 m-2 rounded-3xl text-center text-2xl">
+<div className="flex items-center justify-center pt-60 pb-60 m-auto font-[family-name:var(--font-geist-sans)]">
+    <main className="flex flex-col gap-8 items-center">
+        <span className="flex flex-col items-center justify-center gap-3 bg-blue-300 bg-opacity-30 p-5 m-2 rounded-3xl text-center text-2xl">
             Establece un valor 
             <br />
             <input

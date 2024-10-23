@@ -1,38 +1,35 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-
-// Mock de base de datos para la demostración
-let mockDatabase: { [key: string]: any } = {
-    user1: { calefaccionOffset: 20, calefaccionMinima: 15, calefaccionMaxima: 25, rango: 22 },
-    // Añade más usuarios según sea necesario
-};
+import prisma from "../../lib/prisma"; // Si usas Prisma, o el ORM/biblioteca que uses para interactuar con la base de datos
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    // Solo aceptamos solicitudes POST
     if (req.method === 'POST') {
-        const { value } = req.body; // Extraemos el nuevo valor del cuerpo de la solicitud
+        try {
+            const { value, parameter, userId } = req.body;
 
-        if (!value) {
-            return res.status(400).json({ error: 'Se requiere un valor.' });
-        }
+            // Validar que se han recibido los parámetros necesarios
+            if (!value || !parameter || !userId) {
+                return res.status(400).json({ message: 'Faltan datos necesarios.' });
+            }
 
-        // Aquí puedes añadir lógica para actualizar el valor en la base de datos
-        // Por ejemplo, si estás usando un ORM o una consulta SQL
-        // Aquí, como ejemplo, solo actualizaremos un valor en el mock de base de datos
-        // Suponiendo que estás actualizando 'calefaccionOffset' para 'user1'
+            // Actualizar el valor en la base de datos
+            // Suponiendo que uses Prisma y tienes un modelo User con los campos a actualizar
+            const updatedUser = await prisma.user.update({
+                where: { id: userId },
+                data: {
+                    [parameter]: value, // Actualiza el campo correspondiente dinámicamente
+                },
+            });
 
-        // Si estás utilizando una identificación de usuario, asegúrate de extraerla de algún lugar
-        const userId = 'user1'; // Cambia esto según tu lógica
+            // Si la actualización fue exitosa
+            return res.status(200).json({ message: 'Valor actualizado con éxito.', updatedUser });
 
-        // Actualiza el valor en la "base de datos"
-        if (mockDatabase[userId]) {
-            mockDatabase[userId].calefaccionOffset = value; // Actualiza el campo deseado
-            return res.status(200).json({ message: 'Valor actualizado exitosamente.' });
-        } else {
-            return res.status(404).json({ error: 'Usuario no encontrado.' });
+        } catch (error) {
+            console.error('Error al actualizar el valor:', error);
+            return res.status(500).json({ message: 'Error interno del servidor.' });
         }
     } else {
-        // Si la solicitud no es un POST, respondemos con un error 405
+        // Manejar otros métodos HTTP que no sean POST
         res.setHeader('Allow', ['POST']);
-        return res.status(405).json({ error: `Método ${req.method} no permitido.` });
+        res.status(405).end(`Método ${req.method} no permitido`);
     }
 }
