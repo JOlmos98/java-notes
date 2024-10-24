@@ -3,8 +3,6 @@
 //import Image from "next/image";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { redirect } from "next/dist/server/api-utils";
-import { availableMemory } from "process";
 
 export default function Home() {
 

@@ -81,7 +81,7 @@ export default function UserIn() {
                                 <td className="p-1 text-xl">{userData.calefaccionMinima}</td>
                                 <td className="p-0 text-xl">%</td>
                                 <td>
-                                    <button type="button" onClick={() => handleEdit('calefaccionOffset')}  className="flex bg-blue-600 bg-opacity-30 p-2 mx-auto rounded-xl text-1xl"><PencilIcon className="m-0"/></button>
+                                    <button type="button" onClick={() => handleEdit('calefaccionMinima')}  className="flex bg-blue-600 bg-opacity-30 p-2 mx-auto rounded-xl text-1xl"><PencilIcon className="m-0"/></button>
                                 </td>
                             </tr>
                             <tr className="border-b-2 border-gray-500">
@@ -89,7 +89,7 @@ export default function UserIn() {
                                 <td className="p-1 text-xl">{userData.calefaccionMaxima}</td>
                                 <td className="p-0 text-xl">%</td>
                                 <td>
-                                    <button type="button" onClick={() => handleEdit('calefaccionOffset')}  className="flex bg-blue-600 bg-opacity-30 p-2 mx-auto rounded-xl text-1xl"><PencilIcon className="m-0"/></button>
+                                    <button type="button" onClick={() => handleEdit('calefaccionMaxima')}  className="flex bg-blue-600 bg-opacity-30 p-2 mx-auto rounded-xl text-1xl"><PencilIcon className="m-0"/></button>
                                 </td>
                             </tr>
                             <tr className="border-b-2 border-gray-500">
@@ -97,7 +97,7 @@ export default function UserIn() {
                                 <td className="p-1 text-xl">{userData.rango}</td>
                                 <td className="p-0 text-xl">Cº</td>
                                 <td>
-                                    <button type="button" onClick={() => handleEdit('calefaccionOffset')}  className="flex bg-blue-600 bg-opacity-30 p-2 mx-auto rounded-xl text-1xl"><PencilIcon className="m-0"/></button>
+                                    <button type="button" onClick={() => handleEdit('rango')}  className="flex bg-blue-600 bg-opacity-30 p-2 mx-auto rounded-xl text-1xl"><PencilIcon className="m-0"/></button>
                                 </td>
                             </tr>
                         </tbody>

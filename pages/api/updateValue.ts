@@ -8,7 +8,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
             // Validar que se han recibido los parámetros necesarios
             if (!value || !parameter || !userId) {
-                return res.status(400).json({ message: 'Faltan datos necesarios.' });
+                if (!value) return console.log("Falta: value", value);
+                if (!parameter) return console.log("Falta: parameter", parameter);
+                if (!userId) return console.log("Falta: userId", userId);
+                return console.log("Faltan datos."), res.status(400).json({ message: 'Faltan datos necesarios.' });
             }
 
             // Actualizar el valor en la base de datos
@@ -21,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             });
 
             // Si la actualización fue exitosa
-            return res.status(200).json({ message: 'Valor actualizado con éxito.', updatedUser });
+            return console.log("Valor actualizado."), res.status(200).json({ message: 'Valor actualizado con éxito.', updatedUser });
 
         } catch (error) {
             console.error('Error al actualizar el valor:', error);
