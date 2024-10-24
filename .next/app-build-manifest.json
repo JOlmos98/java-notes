@@ -25,6 +25,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(general)/changeValue/page.js"
+    ],
+    "/(general)/howtouse/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(general)/howtouse/page.js"
     ]
   }
 }
