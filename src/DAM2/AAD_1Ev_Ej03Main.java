@@ -3,6 +3,7 @@ package DAM2;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class AAD_1Ev_Ej03Main {
 
@@ -61,6 +62,7 @@ public class AAD_1Ev_Ej03Main {
 				}
 			}
 		}
+		
 		return losClientes;
 	}
 }

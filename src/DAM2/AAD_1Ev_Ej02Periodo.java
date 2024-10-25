@@ -23,6 +23,8 @@ public class AAD_1Ev_Ej02Periodo {
 		this.fechaFin=fechaFin;
 	}
 	
+	//Métodos: 
+	
 	public int getDiasDePeriodo() {
 		long dias=0;
 		dias=ChronoUnit.DAYS.between(fechaInicio, fechaFin);
