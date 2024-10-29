@@ -1,7 +1,5 @@
 {
   "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/(general)/userData/page": "app/(general)/userData/page.js",
-  "/(general)/changeValue/page": "app/(general)/changeValue/page.js",
-  "/(general)/howtouse/page": "app/(general)/howtouse/page.js"
+  "/(general)/changeValue/page": "app/(general)/changeValue/page.js"
 }

@@ -20,17 +20,6 @@ export default function Home() {
       body:JSON.stringify({userId}),
     });
     const data=await res.json();
-    //if (res.ok){
-      //router.push(`/general/userIn?userId=${encodeURIComponent(userId)}`);
-
-      //Con esto redirigimos a UserIn, esto queda obsoleto porque ahora importamos next/navigation
-      //router.push( 
-        //pathname: './(general)/userIn/page.tsx',
-        //query: {name:data.userName}
-      //);
-    //} else {
-      //setMessage(data.message);
-    //}
     
     if (res.ok) {
       alert("El ID es correcto: "+userId+" "+typeof(userId)); // Ventana emergente si el ID es correcto
