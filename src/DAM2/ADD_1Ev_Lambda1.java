@@ -16,6 +16,7 @@ public class ADD_1Ev_Lambda1 {
 	public static void copiaDir(Path pathOldDir, Path pathNewDir) throws IOException {
 		 List<Path> elementos = Files.walk(pathOldDir).collect(Collectors.toList());
 	     
+		 //OPCION 1:
 		 //for (Path elemento: elementos) 
 		 //Files.copy(elemento, pathNewDir.resolve(pathOldDir.relativize(elemento)));
 		 
@@ -27,7 +28,7 @@ public class ADD_1Ev_Lambda1 {
 		  * línea de código dentro del bucle que copia el archivo.
 		  */
 		 
-
+		 //OPCION 2:
 		 elementos.forEach(ele -> {
 			 try{
 				 Files.copy(ele, pathNewDir.resolve(pathOldDir.relativize(ele)));
