@@ -3,7 +3,7 @@ package DAM2;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class ADD_1Ev_Ej02Main {
+public class AAD_1Ev_Ej02Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -52,7 +52,7 @@ public class ADD_1Ev_Ej02Main {
 			System.err.println((i+1)+". "+emp.get(i).getNombreCompleto()+", "+emp.get(i).getSumaDiasDisfrutados()+".");
 		}
 		
-		ArrayList<AAD_1Ev_Ej02Empleado> empOrdenados=ADD_1Ev_Ej02Main.seleccion(emp);
+		ArrayList<AAD_1Ev_Ej02Empleado> empOrdenados=AAD_1Ev_Ej02Main.seleccion(emp);
 		for (int i=0;i<empOrdenados.size();i++) {
 			System.out.println((i+1)+". "+empOrdenados.get(i).getNombreCompleto()+", "+empOrdenados.get(i).getSumaDiasDisfrutados()+".");
 

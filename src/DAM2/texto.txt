@@ -1,0 +1,3 @@
+Este texto lo copiaremos
+con BufferedWriter y 
+BufferedReader.

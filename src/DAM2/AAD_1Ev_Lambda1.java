@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ADD_1Ev_Lambda1 {
+public class AAD_1Ev_Lambda1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
