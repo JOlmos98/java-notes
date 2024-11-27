@@ -9,8 +9,10 @@ import java.util.stream.Stream;
 public class AAD_Ev1_Ficheros5_Ej7 {
 
     public static void main(String[] args) {
-        Path oldDir = Paths.get("./nuevaCarpeta");
-        Path newDir = Paths.get("./carpetaCopiadaYComprobada");
+        Path oldDir = Paths.get("./carp1/carpACopiar");
+        Path newDir = Paths.get("./carpet");
+        
+        
         
         try {
         Path pruebaDir1=Paths.get("./pruebaDir1");
